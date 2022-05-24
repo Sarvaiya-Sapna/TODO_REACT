@@ -15,7 +15,7 @@ body
   margin-left: -23px;
   margin-top: 2px;
 }
-.fa-remove,.fa-edit
+.fa-remove,.fa-edit,.fa-eye
 {
   font-size: 14px;
   height: 50px;
@@ -27,14 +27,14 @@ body
   width:20px;
   height:30px;
 }
-.del-btn,.edit-btn
+.del-btn,.edit-btn,.view-btn
 {
   background-color:rgb(250, 238, 238);
   width: 20px;
   height: 23px;
 }
 .del-btn{
-  margin-left: 10px;
+  margin-left: 2px;
   color: red;
   float: right;
 }
@@ -43,6 +43,11 @@ body
   margin-left: 2px;  
   color: green;
   float: right;
+}
+.view-btn
+{
+  float: right;
+  color: rgba(3, 3, 58, 0.714);
 }
 .main-div 
 { 
@@ -89,7 +94,6 @@ body
   background-color:rgb(147, 207, 209);
   margin-top: 10px;
   margin-bottom: 10px;
-  
  }
 
 @media (prefers-reduced-motion: no-preference) {

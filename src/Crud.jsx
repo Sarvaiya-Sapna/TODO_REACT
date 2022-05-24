@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
+import { useState } from "react"; 
+import {NavLink} from 'react-router-dom';
 
 //local storage to get
 const getLocalData =() =>{
@@ -16,7 +17,8 @@ const Crud = () => {
    const[inputData,setInputData] = useState('');
    const[items,setItems] = useState(getLocalData(),[]); 
    const[isEditItem,setIsEditItem]=useState({isEdit:false,index:-1});
-   const addItem = () => {
+   const [view,setView]=useState({isview:false,index:-1});
+   const addItem = () => { 
      if(!inputData) { 
       alert("please fill text...");
      }
@@ -45,12 +47,24 @@ const Crud = () => {
     const edit=[items[id]];
     setInputData(edit);
    }
+
+
+   const viewDetails=(id) =>{
+     setView({...view,isview:true,ind:id});
+     const value=[items[id]];
+     console.log(value);
+     setInputData(value);
+     localStorage.setItem('new-list',JSON.stringify(value));
+     
+
+   }
   const deleteItems = (id) =>{
     const updatedItems = items.filter((elem,ind) => {
-      return ind !== id;
+      return ind !== id; 
     });
     setItems(updatedItems);
   }
+ 
     return (
       <>
      <div className="main-div">
@@ -74,6 +88,10 @@ const Crud = () => {
                    <i className="fa fa-edit"></i></button>  
                     <button className="del-btn" onClick={() => deleteItems(ind)}>
                    <i className="fa fa-remove"></i></button>
+                  <NavLink to='/View'>
+                  <button className="view-btn" onClick={()=>viewDetails(ind)}>
+                   <i className="fa fa-eye"></i></button>
+                  </NavLink>
                    </p>
                    </div>
                  )
