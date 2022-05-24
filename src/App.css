@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+body
+{
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.fa-plus
+{
+  font-size: 15px;
+  width: 50px;
+  height: 50px;
+  margin-left: -23px;
+  margin-top: 2px;
+}
+.fa-remove,.fa-edit
+{
+  font-size: 14px;
+  height: 50px;
+  margin-left: -5px;
+  margin-top: 2px;
+}
+.plus-btn 
+{
+  width:20px;
+  height:30px;
+}
+.del-btn,.edit-btn
+{
+  background-color:rgb(250, 238, 238);
+  width: 20px;
+  height: 23px;
+}
+.del-btn{
+  margin-left: 10px;
+  color: red;
+  float: right;
+}
+.edit-btn
+{
+  margin-left: 2px;  
+  color: green;
+  float: right;
+}
+.main-div 
+{ 
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin:0 auto;
+  margin-top: 50px;
+   width: 500px;
+  border: 5px solid black;
+  text-align: center;
+  /* background-color: #c6d4d8; */
+  background-color: #c7dbe3;
+}
+.addItems
+{
+  display: flex;
+  justify-content: center;
+}
+.input-text
+{
+  width: 50%;
+  padding-top: 10px;
+}
+.todo-logo
+{
+  height: 70px;
+  width: 70px;
+}
+.title
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.adding-item
+{
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  background-color:rgb(147, 207, 209);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+ }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
